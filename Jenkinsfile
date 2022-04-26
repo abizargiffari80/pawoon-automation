@@ -5,6 +5,7 @@ pipeline {
     stage('Prepare') {
         steps {
             echo "codot goreng"
+            bat 'dir'
              }
           }
       }
