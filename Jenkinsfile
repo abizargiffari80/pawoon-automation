@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage('Prepare') {
         steps {
+            echo "codot goreng"
+             }
           }
-      }
       }
 }
