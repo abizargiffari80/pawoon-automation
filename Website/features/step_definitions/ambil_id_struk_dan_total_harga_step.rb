@@ -11,7 +11,7 @@ Given('User berada di halaman laporan penjualan dtp') do
     find('div.filter-action-button div:nth-child(1)').click
     tanggalfilter = find('#reportrange > span').text
     p tanggalfilter
-    expect(tanggalfilter).to eql '19-04-2022 - 25-04-2022'
+    expect(tanggalfilter).to eql '20-04-2022 - 26-04-2022'
   end
   
   Then('User dapat id struk beserta total amount order terbaru') do
