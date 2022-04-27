@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Prepare') {
         steps {
-            echo "test echo saber"
+            echo "test echo saber test"
             bat 'dir'
              }
           }
