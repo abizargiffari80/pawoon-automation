@@ -1,5 +1,6 @@
 Given('User berada di halaman produk') do
-    verify_dashboard()
+  sleep 3
+    expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
     masuk_halaman_produk()
   end
   

@@ -1,12 +1,15 @@
-#library untuk action capybara
+#untuk action capybara
 require 'capybara/cucumber'
 
-#library untuk cara untuk mengeskpetasi
+#untuk cara untuk mengeskpetasi
 require 'capybara/rspec'
 
 #untuk oop siteprism
 require 'site_prism'
+
+#untuk debug
 require 'byebug'
+
 #set driver
 Capybara.default_driver = :selenium
 

@@ -1,5 +1,5 @@
 Given('User berada di halaman laporan penjualan dtp') do
-    verify_dashboard()
+    expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
     masuk_laporan_dtp()
     sleep 2
   end
@@ -11,7 +11,7 @@ Given('User berada di halaman laporan penjualan dtp') do
     find('div.filter-action-button div:nth-child(1)').click
     tanggalfilter = find('#reportrange > span').text
     p tanggalfilter
-    expect(tanggalfilter).to eql '20-04-2022 - 26-04-2022'
+    expect(tanggalfilter).to eql '21-04-2022 - 27-04-2022'
   end
   
   Then('User dapat id struk beserta total amount order terbaru') do

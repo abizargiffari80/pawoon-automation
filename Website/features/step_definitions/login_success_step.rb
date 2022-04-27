@@ -1,5 +1,7 @@
 Given('User berada di halaman login Pawoon') do
   visit '/login'
+  sleep 3
+  expect(@pusathalaman.loginpage.has_txt_selamat_datang_kembali?).to be true
   end
   
   When('User login with valid credential') do
@@ -24,20 +26,7 @@ Given('User berada di halaman login Pawoon') do
   end
   
   Then('User verify login success') do
-    #expect(page).to have_content 'Hi, Toko Ikan'
     sleep 3
-    amount = split_string(@pusathalaman.dashboard.txt_sales_total.text)
+    #expect(page).to have_content 'Hi, Toko Ikan'
     expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
-    expect(amount).to eql 0
-    p "angka: #{amount}"
-    
-    status = amount == 0? 'bener' : 'salah'
-
-    p status
-    
-
-  end
-
-  def split_string(value)
-    value.delete!("Rp.").to_i
   end

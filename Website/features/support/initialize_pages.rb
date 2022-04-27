@@ -7,7 +7,7 @@ class PawoonPages
         @dashboard = DashboardPage.new
     end
 
-    def logoutpage
-
+    def productpage
+        
     end
 end

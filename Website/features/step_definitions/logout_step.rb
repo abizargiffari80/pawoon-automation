@@ -1,14 +1,14 @@
 Given('User sudah Login') do
-  verify_dashboard()
+  expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
   end
   
   When('User Logout') do
-    logout()
-    #kalau pake xpath
-    #find(:xpath, "//*[@id='user-menu-dropdown']/span").click
-    #find(:xpath, "//*[@id='notification']/li/span[2]/ul/li[2]/a").click
+    @pusathalaman.dashboard.btn_profile_span.click
+    sleep 2
+    @pusathalaman.dashboard.btn_logout.click
   end
   
   Then('User logout sukses') do
-    verify_dihalaman_login()
+    sleep 2
+    expect(@pusathalaman.loginpage.has_txt_selamat_datang_kembali?).to be true
   end

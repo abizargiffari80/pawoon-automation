@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Prepare') {
         steps {
-            echo "codot goreng"
+            echo "test echo saber"
             bat 'dir'
              }
           }

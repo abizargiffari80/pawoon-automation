@@ -35,10 +35,6 @@ $capabilities = {
     platformName: 'Android',
     platformVersion: '7.1.2',
     app: '/Users/Pawoon/OneDrive/Desktop/Ruby Pawoon Automation/Mobile/app/installer/com.pawoon.pos-225-v2.17.0-staging.apk',
-    #appPackage: 'com.pawoon.pos',
-    #appActivity: 'com.pawoon.pos.main.ui.transaction.TransactionActivity'
-    #appPackage: 'cogem insm.rumahsiapkerja',
-    #appActivity: 'com.rumahsiapkerja.MainActivity'
 }
 
 Appom.register_driver do
