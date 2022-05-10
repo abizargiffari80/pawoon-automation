@@ -11,6 +11,7 @@ pipeline {
               }
               dir("features") {
                 bat "dir"
+                bat "cucumber login_success.feature"
                 }
              }
           }
