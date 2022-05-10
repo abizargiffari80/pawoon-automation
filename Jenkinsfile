@@ -6,11 +6,11 @@ pipeline {
         steps {
             echo "test echo saber test"
             bat 'dir'
-            bat "dir.."
-            bat "dir.."
-            bat "dir.."
-            bat "dir.."
-            bat "dir.."
+            bat 'dir..'
+            bat 'dir..'
+            bat 'dir..'
+            bat 'dir..'
+            bat 'dir..'
              }
           }
       }
