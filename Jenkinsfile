@@ -4,15 +4,12 @@ pipeline {
   stages {
     stage('Prepare') {
         steps {
-            echo "test echo saber test"
+            echo "Mulai jenkins"
             bat "dir"
             dir("Website") {
               bat "dir"
+              bat "cucumber .\features\login_success.feature"
               }
-              dir("features") {
-                bat "dir"
-                bat "cucumber login_success.feature"
-                }
              }
           }
       }
