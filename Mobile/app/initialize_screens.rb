@@ -1,12 +1,12 @@
 class InitializeScreens
-    def login
-        @login ||= LoginScreenAndroid.new
+    def loginpage
+        @loginpage ||= LoginPage.new
     end
-    def welcome
-        @welcome ||= WelcomeScreenAndroid.new
+    def welcomepage
+        @Welcomepage ||= WelcomePage.new
     end
-    def onboarding
-        @onboarding ||= OnboardingScreenAndroidn.new
+    def afterloginpage
+        @afterloginpage ||= AfterLoginPage.new
     end
 
   end

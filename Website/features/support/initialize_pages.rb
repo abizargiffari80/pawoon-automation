@@ -8,6 +8,6 @@ class PawoonPages
     end
 
     def productpage
-        
+        @productpage = ProductPage.new
     end
 end
