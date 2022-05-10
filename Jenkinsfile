@@ -5,10 +5,13 @@ pipeline {
     stage('Prepare') {
         steps {
             echo "test echo saber test"
-            bat 'dir'
+            bat "dir"
             dir("Website") {
               bat "dir"
               }
+              dir("features") {
+                bat "dir"
+                }
              }
           }
       }
