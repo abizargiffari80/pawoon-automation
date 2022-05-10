@@ -6,8 +6,9 @@ pipeline {
         steps {
             echo "test echo saber test"
             bat 'dir'
-            bat 'cd '.\Website\''
-            bat 'dir'
+            dir("Website") {
+              bat "dir"
+              }
              }
           }
       }
