@@ -7,13 +7,9 @@ Given 'user access splash screen' do
 end
 
 When 'user try to login' do
-
     @app.loginpage.input_email_login.send_keys "abizar.giffari+tokoikan@pawoon.com"
     @app.loginpage.input_password_login.send_keys "123456"
     @app.loginpage.button_masuk_login.click
-    if 
-
-    end
 end
 
 Then 'user verity successfuly login' do
