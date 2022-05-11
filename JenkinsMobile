@@ -8,7 +8,6 @@ pipeline {
             bat "dir"
             dir("Mobile") {
               bat "dir"
-              bat "appium -a 127.0.0.1 -p 4723"
               bat "cucumber .\\features\\login.feature"
               }
              }

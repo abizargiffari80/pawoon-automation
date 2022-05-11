@@ -34,6 +34,7 @@ $capabilities = {
     automationName: 'UiAutomator2',
     platformName: 'Android',
     platformVersion: '7.1.2',
+    autoGrantPermissions: 'true',
     app: '/Users/Pawoon/OneDrive/Desktop/Ruby Pawoon Automation/Mobile/app/installer/com.pawoon.pos-225-v2.17.0-staging.apk',
 }
 
@@ -45,13 +46,8 @@ Appom.register_driver do
   $driver = Appium::Driver.new(options, false)
 end
 
-# begin
-#   $appium_driver = Appium::Driver.new(caps, true)
-#   $driver = $appium_driver.start_driver
-# rescue Exception => e
-#   puts e.message
-#   Process.exit(0)
-# end
+command = "appium -a 127.0.0.1 -p 4723"
+pid = Process.spawn(command)
 
 # clear report files
 report_root = File.absolute_path('./report')
