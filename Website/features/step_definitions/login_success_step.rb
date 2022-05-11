@@ -6,9 +6,11 @@ Given('User berada di halaman login Pawoon') do
   
   When('User login with valid credential') do
     sleep 1
+    @inputemail = "abizar.giffari+tokoikan@pawoon.com"
+    @inputpassword = "123456"
     @pusathalaman.loginpage.input_email.click
-    @pusathalaman.loginpage.input_email.set "abizar.giffari+tokoikan@pawoon.com"
-    @pusathalaman.loginpage.input_password.set "123456"
+    @pusathalaman.loginpage.input_email.set @inputemail
+    @pusathalaman.loginpage.input_password.set @inputpassword
     @pusathalaman.loginpage.btn_login.click
 
     #kalo find bisa pake css dan xpath
@@ -31,7 +33,8 @@ Given('User berada di halaman login Pawoon') do
     @pusathalaman.dashboard.btn_profile.click
     #expect(page).to have_content 'Hi, Toko Ikan'
     #expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
-    #@namaToko = split_string(@pusathalaman.dashboard.txt_nama_akun.text)
-    namaToko = find('#account-content ul li:nth-child(2) span').text
-    p "Login sebagai = #{namaToko}"
+    namatoko = @pusathalaman.dashboard.txt_nama_akun.text
+    #namaToko = find('#account-content ul li:nth-child(2) span').text
+    p "Login sebagai = #{namatoko}"
+    p "Email yang dimasukkan = #{@inputemail}"
   end
