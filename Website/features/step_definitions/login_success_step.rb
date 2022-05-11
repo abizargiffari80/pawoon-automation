@@ -6,7 +6,7 @@ Given('User berada di halaman login Pawoon') do
   
   When('User login with valid credential') do
     sleep 1
-    @inputemail = "abizar.giffari+tokoikan@pawoon.com"
+    @inputemail = "abizar.giffari+staging@pawoon.com"
     @inputpassword = "123456"
     @pusathalaman.loginpage.input_email.click
     @pusathalaman.loginpage.input_email.set @inputemail

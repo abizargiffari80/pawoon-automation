@@ -17,3 +17,7 @@ After do |scenario|
   end
   $driver.reset
 end
+
+#at_exit do
+#  system 'taskkill /F /IM node.exe'
+#end

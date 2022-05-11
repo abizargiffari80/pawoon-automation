@@ -46,12 +46,14 @@ Appom.register_driver do
   $driver = Appium::Driver.new(options, false)
 end
 
-command = "appium -a 127.0.0.1 -p 4723"
-pid = Process.spawn(command)
+#puts "status remote: #{$driver.remote_status}"
+#if $driver.remote_status.nil?
+  appiumstart = "appium -a 127.0.0.1 -p 4723"
+  Process.spawn(appiumstart)
+#end
 
 # clear report files
 report_root = File.absolute_path('./report')
-
 if ENV['REPORT_PATH'].nil?
   puts ' ========Deleting old reports ang logs========='
   FileUtils.rm_rf(report_root, secure: true)
@@ -60,3 +62,8 @@ end
 ENV['REPORT_PATH'] ||= Time.now.strftime('%F_%H-%M-%S')
 path = "#{report_root}/#{ENV['REPORT_PATH']}"
 FileUtils.mkdir_p path
+
+#system 'taskkill /F /IM node.exe'
+
+#appiumend = "taskkill /F /IM node.exe"
+#Process.spawn(appiumend)
