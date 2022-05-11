@@ -7,9 +7,8 @@ pipeline {
             echo "Mulai jenkins"
             bat "dir"
             dir("Website") {
-              bat "dir"
-              bat "cucumber"
-              bat "cucumber .\\features\\ambil_id_struk_dan_total.feature"
+              bat "dir
+              cucumber .\\features\\ambil_id_struk_dan_total.feature"
               }
              }
           }
