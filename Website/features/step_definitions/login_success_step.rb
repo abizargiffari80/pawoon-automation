@@ -26,7 +26,12 @@ Given('User berada di halaman login Pawoon') do
   end
   
   Then('User verify login success') do
+    @pusathalaman.dashboard.btn_profile_span.click
     sleep 3
+    @pusathalaman.dashboard.btn_profile.click
     #expect(page).to have_content 'Hi, Toko Ikan'
-    expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
+    #expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
+    #@namaToko = split_string(@pusathalaman.dashboard.txt_nama_akun.text)
+    namaToko = find('#account-content ul li:nth-child(2) span').text
+    p "Login sebagai = #{namaToko}"
   end
