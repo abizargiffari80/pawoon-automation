@@ -8,7 +8,7 @@ pipeline {
             bat "dir"
             dir("Website") {
               bat "dir"
-              bat "cucumber .\\features\\login_success.feature"
+              bat "cucumber .\\features\\ambil_id_struk_dan_total.feature"
               }
              }
           }
