@@ -29,7 +29,7 @@ appium_lib_options = {
 
 $capabilities = {
     build: 'Android Test Ruby',
-    name: 'login case',
+    #name: 'login case',
     deviceName: 'emulator-5554',
     automationName: 'UiAutomator2',
     platformName: 'Android',
@@ -48,8 +48,8 @@ end
 
 #puts "status remote: #{$driver.remote_status}"
 #if $driver.remote_status.nil?
-  appiumstart = "appium -a 127.0.0.1 -p 4723"
-  Process.spawn(appiumstart)
+  #appiumstart = "appium -a 127.0.0.1 -p 4723"
+  #Process.spawn(appiumstart)
 #end
 
 # clear report files

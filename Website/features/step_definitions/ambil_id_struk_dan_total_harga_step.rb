@@ -18,7 +18,7 @@ Given('User berada di halaman laporan penjualan dtp') do
   Then('User dapat id struk beserta total amount order terbaru') do
     sleep 5
     if page.has_selector?('tr.not-found')
-      p "Ga ada data"
+      p "Belum ada data transaksi"
     else
       #dapetin id struk dan total, lalu jadiin variable
       @idStrukStr = find('tbody.tbody-striped tr:nth-child(1) td:nth-child(3)').text

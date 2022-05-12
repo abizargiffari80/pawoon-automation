@@ -1,5 +1,6 @@
 Given('User sudah Login') do
-  expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
+  #expect(@pusathalaman.dashboard.has_txt_toko_ikan?).to be true
+  #expect(@pusathalaman.dashboard.has_)
   end
   
   When('User Logout') do

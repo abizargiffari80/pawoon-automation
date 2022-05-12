@@ -1,10 +1,16 @@
 class LoginPage < Appom::Page
     element :input_email_login, :id, "com.pawoon.pos.staging:id/etEmail"
     element :input_password_login, :id, "com.pawoon.pos.staging:id/etPassword"
-    element :button_masuk_login, :id, "com.pawoon.pos.staging:id/btnSubmit"
+    element :btn_masuk_login, :id, "com.pawoon.pos.staging:id/btnSubmit"
     #element :txt_location_permission, :id "com.android.packageinstaller:id/permission_message"
     #element :btn_location_permission_yes, :id "com.android.packageinstaller:id/permission_allow_button"
     #element :input_email_login, :accessibility_id, "TextInputAlmatEmailLogin"
     #element :input_password_login, :accessibility_id, "TextInputKataSandiLogin"
     #element :button_masuk_login, :accessibility_id, "ButtonMasukLogin"
+    element :btn_outlet_pertama, :xpath, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout"
+    element :btn_perangkat_pertama, :xpath, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.ImageView[2]"
+    element :btn_operator_pertama, :xpath, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.ImageView[2]"
+    element :btn_pin_satu, :xpath, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView"
+    #element :btn_outlet_pertama_att, :attribute, "//*[@class = 'android.widget.TextView' and @index = '1' and @resource-id = 'com.pawoon.pos.staging:id/tvName']"
+    element :btn_outlet_pertama_att, :class, "android.widget.TextView"
 end
