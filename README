@@ -124,3 +124,17 @@ Memulai Automation Website
     -> Untuk referensi lebih lanjut, dapat melalui referensi : https://github.com/teamcapybara/capybara
 
 11. Tinggal koding2 dan jalankan test case dengan step nomor 7. Selamat mencoba guys!!!!
+
+
+Sumber referensi :
+- https://pojokqa.wordpress.com/2021/02/05/web-automation-testing-menggunakan-ruby-selenium-dan-cucumber-dengan-design-pattern-pom/
+- https://pojokqa.wordpress.com/2020/12/20/mengatur-environment-variable/
+- https://red-green-refactor.com/2020/04/25/cukes-and-apples-app-automation-with-ruby-and-appium/
+- https://cucumber.io/docs/gherkin/reference/
+- https://rubydoc.info/github/teamcapybara/capybara/master/Capybara/Node/Matchers
+- https://github.com/teamcapybara/capybara
+- https://github.com/rspec/rspec-rails
+- https://github.com/site-prism/site_prism
+- https://github.com/appium/appium-desktop/releases/tag/v1.22.3
+- https://github.com/appium/appium-inspector/releases
+- http://appium.io/docs/en/writing-running-appium/caps/
