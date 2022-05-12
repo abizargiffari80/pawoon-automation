@@ -5,7 +5,9 @@ pipeline {
     stage('Prepare') {
         steps {
             bat 'dir'
-             }
+            dir("Website") {
+                bat 'dir'
+              }
           }
       }
 }
