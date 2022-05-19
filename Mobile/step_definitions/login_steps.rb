@@ -10,13 +10,13 @@ When 'user try to login' do
     @app.loginpage.input_email_login.send_keys "abizar.giffari+tokoikan@pawoon.com"
     @app.loginpage.input_password_login.send_keys "123456"
     @app.loginpage.btn_masuk_login.click
-    @app.loginpage.btn_outlet_pertama_att.click
+    @app.loginpage.btn_outlet_pertama.click
     #driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Automation\")"));
-    sleep 10
+    sleep 5
     #byebug
-    @app.loginpage.btn_perangkat_pertama.click
-    @app.loginpage.btn_operator_pertama.click
-    @app.loginpage.btn_pin_satu.click
+    @app.loginpage.btn_perangkat_pertama_id.click
+    #@app.loginpage.btn_operator_pertama.click
+    #@app.loginpage.btn_pin_satu.click
 end
 
 Then 'user verity successfuly login' do

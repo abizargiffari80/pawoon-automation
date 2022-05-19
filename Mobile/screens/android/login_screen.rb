@@ -12,5 +12,7 @@ class LoginPage < Appom::Page
     element :btn_operator_pertama, :xpath, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.ImageView[2]"
     element :btn_pin_satu, :xpath, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView"
     #element :btn_outlet_pertama_att, :attribute, "//*[@class = 'android.widget.TextView' and @index = '1' and @resource-id = 'com.pawoon.pos.staging:id/tvName']"
-    element :btn_outlet_pertama_att, :class, "android.widget.TextView"
+    element :btn_perangkat_pertama_att, :clas, "android.widget.TextView"
+    element :btn_perangkat_pertama_id, :id, "com.pawoon.pos.staging:id/tvName"
+    element :btn_pop_up, :id, "com.pawoon.pos.staging:id/tv_yes"
 end
