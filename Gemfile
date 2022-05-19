@@ -25,7 +25,7 @@ gem 'report_builder'
 gem 'require_all'
 #gem 'rspec', '~> 3.5'
 gem 'rspec'
-gem 'rspec-expectations', '3.5.0'
+#gem 'rspec-expectations', '3.5.0'
 #gem 'rubocop', '0.59.2', require: false
 gem 'show_me_the_cookies'
 #gem 'site_prism', '2.16'
