@@ -11,12 +11,12 @@ Letsgoo
 Prepare ruby :
 
 1. Download dan install Code Editor sesuai seleramu
-   -> Penulisan ini menggunakan Visual Code
+   -> Penulisan ini menggunakan Visual Studio Code
 
 2. Download dan install Ruby
    Link : https://rubyinstaller.org/downloads/
    -> Automation ini dibuat dengan ruby versi 2.7 (disarankan mengikutin versi yg sama)
-   -> Jika ingin menggunakan versi terupdate, perlu diperhatikan pula versi gem2 yang nanti akan di install
+   -> Jika ingin menggunakan versi terupdate, perlu diperhatikan penulisan syntac serta versi gem2 yang nanti akan di install
 
 3. Setting Environtment Variable Ruby
    How to : https://www.geeksforgeeks.org/environment-setup-in-ruby/#:~:text=Once%20you%20installed%20Ruby%20with,tab%20click%20on%20Environment%20Variables.
@@ -41,14 +41,54 @@ Prepare ruby :
       'gem install cucumber -v 7.1.0'
    -> Untuk menginstall semua gem yang ada di file Gemfile.rb secara langsung, bisa menggunakan command
       'bundle install'
-      **Untuk bundle install, jalankan di dalam folder automation
+      **Untuk bundle install, jalankan di dalam folder automation ini
    -> Untuk cek gem-gem yang sudah diinstall
       'gem list'
-   -> Pada kondisi ini, seharusnya kita sudah bisa menggunakan automation website. Lihat pada section "Memulai Automation Website"
+   -> Pada kondisi ini, seharusnya kita sudah bisa menggunakan automation website. Masuk pada folder Website dengan cmd, lalu
+      jalankan perintah 'cucumber .\feaures\login_success.feature'
+   -> Jika ingin membuat sendiri, lihat section "Memulai Automation Website"
 
-Untuk step 6 kebawah, digunakan untuk prepare Mobile Automation + Jenkins, bisa dilakukan nanti jika ingin mencoba automation website terlebih dahulu
+Untuk step 6 kebawah, digunakan untuk prepare Mobile Automation + Jenkins, bisa dilakukan nanti jika ingin mencoba automation
+website terlebih dahulu
 
 *UNDER MAINTENANCE*
+6. Download SDK, JDK, JRE lalu tambahkan di System Variables (seperti setelah instalasi Ruby)
+   -> Path SDK beri nama ANDROID_HOME
+   -> Path JDK beri nama JAVA_HOME
+   -> Path JRE beri nama JRE_HOME
+
+7. Download dan install emulator android sesuai selera
+   -> Disini penulis menggunakan emulator ldplayer4 4.0.76
+   -> Setting ADB connection menjadi "open local connection"
+   -> Untuk mengecek emulator dapat terkoneksi dengan appium, cek dengan command 'adb connection' melalui cmd
+   -> Jika emulator mu muncul dan status online (bertuliskan device), maka emulator sudah siap digunakan
+
+8. Download dan install appium server
+   -> Appium server digunakan untuk menjalankan server appium agar bisa digunakan automation mobile
+   -> Buka appium server -> setting -> masukkan path ANDROID_HOME dan JAVA_HOME yg sama dengan step 6
+   -> Jika ingin menjalankan, masukkan host 127.0.0.1 dan port 4723
+   Link : https://github.com/appium/appium-desktop/releases
+
+9. Download dan install appium inspector
+   -> Appium inspector digunakan untuk inspect element pada aplikasi mobile (Ini dilakukan untuk inspect)
+   -> Samakan Remote Host dan Remote Port dengan appium server
+   -> Isi Remote Path dengan /wd/hub
+   -> Capabilities digunakan sebagai spesifikasi dari emulator/device yg kita gunakan, untuk memahami capabilities lebih
+      lanjut, dapat melalui http://appium.io/docs/en/writing-running-appium/caps/
+   Link : https://github.com/appium/appium-inspector/releases
+
+10. Pada tahap ini, seharusnya kita bisa menjalankan automation mobile. Perlu diperhatikan beberapa hal
+    -> Apk disimpan didalam folder automation/mobile/app/installer
+    -> Buka file ini automation/mobile/app/env.rb, lalu sesuaikan path apk nya dengan path di laptop mu
+    -> Pastikan capabilities nya sudah sesuai dengan device/emulator mu
+    -> Jalankan appium server
+    -> Jalankan automation mobile dengan masuk ke folder automation/mobile dan run command ini melalui cmd
+       'cucumber .\features\login.feature'
+    -> Jika ada error eventmachine, jalankan commmand
+       'gem uninstall eventmachine'
+       lalu
+       'gem install eventmachine --platform ruby'
+    -> Jalankan lagi cucumber nya
 
 ===========================================================================================================================
 
