@@ -8,5 +8,7 @@ class InitializeScreens
     def afterloginpage
         @afterloginpage ||= AfterLoginPage.new
     end
-
+    def logoutpage 
+        @logoutpage ||= LogoutPage.new
+    end
   end

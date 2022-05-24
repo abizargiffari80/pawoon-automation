@@ -29,13 +29,15 @@ appium_lib_options = {
 
 $capabilities = {
     build: 'Android Test Ruby',
-    #name: 'login case',
+    name: 'login case',
     deviceName: 'emulator-5554',
     automationName: 'UiAutomator2',
     platformName: 'Android',
     platformVersion: '7.1.2',
     autoGrantPermissions: 'true',
     app: '/Users/Pawoon/OneDrive/Desktop/Ruby Pawoon Automation/Mobile/app/installer/com.pawoon.pos-225-v2.17.0-staging.apk',
+    noReset: true,
+    skipDeviceInitialization: true
 }
 
 Appom.register_driver do
@@ -44,13 +46,14 @@ Appom.register_driver do
     caps: $capabilities
   }
   $driver = Appium::Driver.new(options, false)
+  # @driver = Appium::Driver.new(:caps => options).start_driver
 end
 
-#puts "status remote: #{$driver.remote_status}"
-#if $driver.remote_status.nil?
-  #appiumstart = "appium -a 127.0.0.1 -p 4723"
-  #Process.spawn(appiumstart)
-#end
+# #puts "status remote: #{$driver.remote_status}"
+# #if $driver.remote_status.nil?
+#   appiumstart = "appium -a 127.0.0.1 -p 4723"
+#   Process.spawn(appiumstart)
+# #end
 
 # clear report files
 report_root = File.absolute_path('./report')

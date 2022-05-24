@@ -97,7 +97,8 @@ Instalasi Jenkins
 
 12. Download dan install Jenkins
     Link : https://www.jenkins.io/download/
-    -> Jika pada tahap memasukkan user local ada error, ikuti step2 di : https://www.jenkins.io/doc/book/installing/windows/#invalid-service-logon-credentials
+    -> Jika pada tahap memasukkan user local ada error, ikuti step2 di :
+       https://www.jenkins.io/doc/book/installing/windows/#invalid-service-logon-credentials
     -> Test credential sebelum lanjut untuk memastikan user bisa digunakan
     -> Cek juga port local sebelum lanjut next step
     -> Masukkan jdk versi 8 atau 11 yg sudah kita download dan install di step 11

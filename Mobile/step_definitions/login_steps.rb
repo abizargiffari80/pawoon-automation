@@ -1,25 +1,53 @@
 Given 'user access splash screen' do
     sleep(5)
     @app.welcomepage.button_masuk_disini.click
+    # @app.welcomepage.button_masuk_disini.click
     #@app.welcome.masuk_text1_splashscreen.click
     #sleep(3)
     #@app.login.input_email_login.displayed?
 end
 
 When 'user try to login' do
-    @app.loginpage.input_email_login.send_keys "abizar.giffari+tokoikan@pawoon.com"
-    @app.loginpage.input_password_login.send_keys "123456"
+    @app.loginpage.input_email_login.send_keys  "automation@pawoon.com" #"abizar.giffari+tokoikan@pawoon.com"
+    @app.loginpage.input_password_login.send_keys "llllll" #"123456"
     @app.loginpage.btn_masuk_login.click
-    @app.loginpage.btn_outlet_pertama.click
-    #driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Automation\")"));
-    sleep 5
-    #byebug
-    @app.loginpage.btn_perangkat_pertama_id.click
-    #@app.loginpage.btn_operator_pertama.click
-    #@app.loginpage.btn_pin_satu.click
 end
 
 Then 'user verity successfuly login' do
-    sleep(3)
-    #expect(@app.onboarding.text_botnavbar_onboarding.displayed?).to be true
+    sleep(7)
+    expect(@app.afterloginpage.text_auto_device.displayed?).to be true
+    # Pilih Device
+    @app.afterloginpage.text_auto_device.click
+    if @app.afterloginpage.text_data_sebelumnya.displayed?
+        @app.afterloginpage.text_data_sebelumnya_ya.click
+    elsif  @app.afterloginpage.text_ganti_perangkat.displayed?
+        @app.afterloginpage.text_ganti_perangkat_ganti.click
+    end
+    
+    sleep(25)
+    # Pilih Operator
+    @app.afterloginpage.text_automation.click
+    sleep(2)
+    # Loop btn 1
+    $i = 0
+    $num = 4
+    while $i < $num  do
+       @app.afterloginpage.text_btn_1.click
+        $i +=1
+    end 
+    sleep(5)
+    expect(@app.afterloginpage.img_produk.displayed?).to be true
+    # Logout
+    # @app.logoutpage.btn_burger.click
+    # sleep(1)
+    # @app.logoutpage.btn_pengaturan.click
+    # sleep(1)
+    # @app.logoutpage.btn_informasi.click
+    # sleep(1)
+    # @app.logoutpage.btn_logout.click
+    # sleep(1)
+    # @app.logoutpage.btn_ya.click
+    # sleep(2)
+    # expect(@app.loginpage.input_email_login.displayed?).to be true
+    # sleep(2)
 end
