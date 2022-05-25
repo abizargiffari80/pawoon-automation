@@ -14,4 +14,10 @@ module BaseHelper
   rescue Exception => e
     raise e.message
   end
+
+  def waitFor(element:false)
+    wait = Selenium::WebDriver::Wait.new(timeout: 5)
+    wait.until {yield}
+  end
+
 end

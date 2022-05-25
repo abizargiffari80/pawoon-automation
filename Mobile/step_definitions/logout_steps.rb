@@ -35,6 +35,7 @@ Given 'user access homepage' do
     end
     expect(@app.afterloginpage.img_produk.displayed?).to be true
 end
+
 When 'user try to logout' do
     @app.logoutpage.btn_burger.click
     sleep(1)
@@ -48,6 +49,7 @@ When 'user try to logout' do
     sleep(2)
     
 end
+
 Then 'user successfuly logout' do
     expect(@app.loginpage.input_email_login.displayed?).to be true
     sleep(2)

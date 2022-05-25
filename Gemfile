@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby ' 2.7.6'
 
 gem 'appium_lib'
-gem 'appom'
+gem 'appom', '~> 1.2.2'
 gem 'byebug'
 gem 'capybara'
 gem 'capybara-screenshot'

@@ -1,1 +1,123 @@
-[{"id":"logout","uri":"./features/logout.feature","keyword":"Feature","name":"Logout","description":"","line":1,"elements":[{"id":"logout;user-success-logout","keyword":"Scenario","name":"User Success Logout","description":"","line":3,"type":"scenario","steps":[{"keyword":"Given ","name":"user access homepage","line":4,"match":{"location":"step_definitions/logout_steps.rb:1"},"result":{"status":"passed","duration":13951035000},"after":[{"match":{"location":"app/hook.rb:5"},"result":{"status":"passed","duration":38200}}]},{"keyword":"When ","name":"user try to logout","line":5,"match":{"location":"step_definitions/logout_steps.rb:38"},"result":{"status":"passed","duration":6282348700},"after":[{"match":{"location":"app/hook.rb:5"},"result":{"status":"passed","duration":27900}}]},{"keyword":"Then ","name":"user successfuly logout","line":6,"match":{"location":"step_definitions/logout_steps.rb:51"},"result":{"status":"passed","duration":2047136500},"after":[{"match":{"location":"app/hook.rb:5"},"result":{"status":"passed","duration":42100}}]}],"before":[{"match":{"location":"appom-1.4.0/lib/appom/cucumber.rb:4"},"result":{"status":"passed","duration":6401784200}},{"match":{"location":"app/hook.rb:1"},"result":{"status":"passed","duration":21900}}],"after":[{"match":{"location":"app/hook.rb:8"},"result":{"status":"passed","duration":833100}}]}]}]
+[
+  {
+    "id": "login",
+    "uri": "features/login.feature",
+    "keyword": "Feature",
+    "name": "Login",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "login;user-success-login",
+        "keyword": "Scenario",
+        "name": "User Success Login",
+        "description": "",
+        "line": 3,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "user access splash screen",
+            "line": 4,
+            "match": {
+              "location": "step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5102166300
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "app/hook.rb:5"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 40400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "user try to login",
+            "line": 5,
+            "match": {
+              "location": "step_definitions/login_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3111116900
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "app/hook.rb:5"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "user verity successfuly login",
+            "line": 6,
+            "match": {
+              "location": "step_definitions/login_steps.rb:18"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Can not found element with args = [:xpath, \"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.TextView\"] (StandardError)\n./step_definitions/login_steps.rb:29:in `\"user verity successfuly login\"'\nfeatures/login.feature:6:in `user verity successfuly login'",
+              "duration": 24026133500
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "app/hook.rb:5"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "appom-1.4.0/lib/appom/cucumber.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6782015300
+            }
+          },
+          {
+            "match": {
+              "location": "app/hook.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27900
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "app/hook.rb:8"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `feature' for #<Cucumber::Core::Test::Case: features/login.feature:3> (RuntimeError)\n./app/helpers/base_helper.rb:15:in `rescue in take_screenshot_and_resize'\n./app/helpers/base_helper.rb:2:in `take_screenshot_and_resize'\n./app/hook.rb:11:in `After'",
+              "duration": 1012200
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

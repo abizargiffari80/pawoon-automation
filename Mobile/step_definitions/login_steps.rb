@@ -8,21 +8,32 @@ Given 'user access splash screen' do
 end
 
 When 'user try to login' do
-    @app.loginpage.input_email_login.send_keys  "automation@pawoon.com" #"abizar.giffari+tokoikan@pawoon.com"
-    @app.loginpage.input_password_login.send_keys "llllll" #"123456"
-    @app.loginpage.btn_masuk_login.click
+    #@app.loginpage.input_email_login.send_keys "abizar.giffari+tokoikan@pawoon.com"
+    #@app.loginpage.input_password_login.send_keys "123456"
+    @app.loginpage.input_email_login.send_keys "automation@pawoon.com"
+    @app.loginpage.input_password_login.send_keys "llllll"
+    @app.loginpage.button_masuk_login.click
 end
 
 Then 'user verity successfuly login' do
-    sleep(7)
-    expect(@app.afterloginpage.text_auto_device.displayed?).to be true
+    # Pilih Outlet
+    waitFor {@app.afterloginpage.text_pilih_outlet}
+    expect(@app.afterloginpage.text_pilih_outlet.displayed?).to be true
+    @app.afterloginpage.text_pilih_outlet.click
     # Pilih Device
-    @app.afterloginpage.text_auto_device.click
+    waitFor {@app.afterloginpage.text_pilih_device}
+    #byebug
+    @app.afterloginpage.text_pilih_device.click
+    #waitFor {@app.afterloginpage.has_text_data_sebelumnya}
+    #if @app.afterloginpage.has_text_data_sebelumnya
     if @app.afterloginpage.text_data_sebelumnya.displayed?
         @app.afterloginpage.text_data_sebelumnya_ya.click
-    elsif  @app.afterloginpage.text_ganti_perangkat.displayed?
-        @app.afterloginpage.text_ganti_perangkat_ganti.click
     end
+    # if @app.afterloginpage.text_data_sebelumnya.displayed?
+    #     @app.afterloginpage.text_data_sebelumnya_ya.click
+    # elsif  @app.afterloginpage.text_ganti_perangkat.displayed?
+    #     @app.afterloginpage.text_ganti_perangkat_ganti.click
+    # end
     
     sleep(25)
     # Pilih Operator

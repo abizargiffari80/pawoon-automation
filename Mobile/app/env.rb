@@ -35,8 +35,9 @@ $capabilities = {
     platformName: 'Android',
     platformVersion: '7.1.2',
     autoGrantPermissions: 'true',
-    app: '/Users/Pawoon/OneDrive/Desktop/Ruby Pawoon Automation/Mobile/app/installer/staging.apk',
+    app: '/Users/Pawoon/OneDrive/Desktop/pawoon-automation/Mobile/app/installer/staging.apk',
     noReset: true,
+    fullReset: false,
     skipDeviceInitialization: true
 }
 
