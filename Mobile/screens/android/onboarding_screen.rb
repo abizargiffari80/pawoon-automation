@@ -5,7 +5,7 @@ class AfterLoginPage < Appom::Page
     # element :text_auto_device, :uiautomator, 'new UiSelector().className("android.widget.TextView").instance(0)'
     # element :btn_masuk_disini, :text, 'Masuk di sini'
     # element :text_autodevice, :text, 'Auto device'
-    element :text_automationn, :text, 'Automation'
+    element :text_automationn, :id, 'com.pawoon.pos.staging:id/tvName'
     element :text_pilih_outlet, :id, "com.pawoon.pos.staging:id/tvName" 
     element :text_pilih_device, :id, "com.pawoon.pos.staging:id/tvName"
     element :text_btn_1, :uiautomator, 'new UiSelector().className("android.widget.TextView").instance(3)'

@@ -21,12 +21,13 @@ Then 'user verity successfuly login' do
     expect(@app.afterloginpage.text_pilih_outlet.displayed?).to be true
     @app.afterloginpage.text_pilih_outlet.click
     # Pilih Device
-    waitFor {@app.afterloginpage.text_pilih_device}
+    #waitFor {@app.afterloginpage.text_pilih_device}
     #byebug
+    sleep(5)
     @app.afterloginpage.text_pilih_device.click
     #waitFor {@app.afterloginpage.has_text_data_sebelumnya}
-    #if @app.afterloginpage.has_text_data_sebelumnya
-    if @app.afterloginpage.text_data_sebelumnya.displayed?
+    if @app.afterloginpage.has_text_data_sebelumnya
+    #if @app.afterloginpage.text_data_sebelumnya.displayed?
         @app.afterloginpage.text_data_sebelumnya_ya.click
     end
     # if @app.afterloginpage.text_data_sebelumnya.displayed?
